@@ -7,11 +7,11 @@ import { useParams } from 'react-router-dom'
 import { db } from '../firebase/firebaseApp'
 import { FormData } from './form'
 import Abilities from '../components/Abilities'
+import Attributes from '../components/Attributes'
 
 const FormPage = () => {
   const { id } = useParams()
   const [data, setData] = useState<FormData>({})
-
   const timer = useRef<ReturnType<typeof setTimeout>>()
   const current_data = useRef<FormData>({})
 
@@ -49,10 +49,13 @@ const FormPage = () => {
 
   return (
     <div className="form-page">
-      <pre className="preview">{JSON.stringify(data, null, 2)}</pre>
+      {/* <pre className="preview">{JSON.stringify(data, null, 2)}</pre> */}
 
       <div className="abilities">
         <Abilities data={data} setValue={setValue} />
+      </div>
+      <div className="attributes">
+        <Attributes data={data} setValue={setValue} />
       </div>
     </div>
   )

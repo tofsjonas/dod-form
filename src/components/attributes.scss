@@ -1,0 +1,23 @@
+.attribute-values {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    text-align: center !important;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+  }
+}
+.attribute-checks {
+  // background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.6em 0.2em 0 0.4em;
+  .checkbox {
+    // background-color: blue;
+    --color: red;
+    font-size: 1.4rem;
+  }
+}

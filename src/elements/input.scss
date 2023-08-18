@@ -1,0 +1,22 @@
+.input {
+  display: block;
+  background-color: transparent;
+  background-color: rgba(255, 165, 0, 0.1);
+  border: 0;
+  height: 0.8rem;
+  font-size: 0.7em;
+  margin-bottom: 0.31rem;
+
+  &:active,
+  &:focus {
+    background-color: rgba(255, 165, 0, 0.3);
+  }
+
+  &.val {
+    width: 2.2em;
+    text-align: right;
+  }
+  &.name {
+    width: 9em;
+  }
+}

@@ -6,7 +6,6 @@ import { Route, Routes } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { doc, onSnapshot } from 'firebase/firestore'
 import { db } from './firebase/firebaseApp'
-
 function App() {
   const [count, setCount] = useState('')
 

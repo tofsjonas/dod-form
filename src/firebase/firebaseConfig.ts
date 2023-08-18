@@ -1,4 +1,4 @@
-// const firebaseConfig = {
+// export const firebaseConfig = {
 //   apiKey: "AIzaSyAKFIdwlkv7tu8mdpc19fSCIpmcsGZQRUc",
 //   authDomain: "dod-form.firebaseapp.com",
 //   projectId: "dod-form",

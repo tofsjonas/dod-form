@@ -3,7 +3,7 @@
 }
 
 .form-page {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   // width: 850px;
   // height: 1098px;
@@ -11,10 +11,18 @@
   width: var(--page-width);
   height: calc(var(--page-width) * 1.291764706);
 
-  background: url('../assets/form-bg.jpg');
+  background: url('../assets/form-bg.jpg') no-repeat;
   position: relative;
 }
 
+.attributes {
+  // background-color: aqua;
+  width: 27.7em;
+  height: 6em;
+  position: absolute;
+  top: 11.5em;
+  left: 12.7em;
+}
 .abilities {
   // background-color: red;
   // opacity: 0.4;

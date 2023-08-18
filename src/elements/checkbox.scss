@@ -1,4 +1,6 @@
 .checkbox {
+  --color: black;
+  --hover: green;
   // background-color: pink;
   position: relative;
   height: 1.3em;
@@ -12,22 +14,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    height: 6px;
-    width: 3px;
-    border-bottom: 3px solid transparent;
-    border-right: 3px solid transparent;
-  }
-
-  &.checked {
-    .checkmark {
-      border-color: black;
-      visibility: visible;
-    }
+    height: 0.4em;
+    width: 0.2em;
+    border-bottom: 0.2em solid transparent;
+    border-right: 0.2em solid transparent;
   }
   &:hover {
     // background-color: orange;
     .checkmark {
-      border-color: green;
+      border-color: var(--hover);
+    }
+  }
+
+  &.checked {
+    .checkmark {
+      border-color: var(--color);
     }
   }
 
