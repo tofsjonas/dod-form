@@ -1,0 +1,32 @@
+:root {
+  --page-width: 100rem;
+}
+
+.form-page {
+  margin: 0;
+  padding: 0;
+  // width: 850px;
+  // height: 1098px;
+
+  width: var(--page-width);
+  height: calc(var(--page-width) * 1.291764706);
+
+  background: url('../assets/form-bg.jpg');
+  position: relative;
+}
+
+.abilities {
+  // background-color: red;
+  // opacity: 0.4;
+  width: 21em;
+  height: 25em;
+  position: absolute;
+  top: 24.43em;
+  left: 16.1em;
+}
+
+.preview {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
