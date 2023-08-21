@@ -26,11 +26,18 @@ export const coins = css`
 `
 
 export const css_top = css`
+  /* background-color: rgba(0, 255, 255, 0.3); */
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  width: 36em;
+  width: 34.7em;
   height: 2em;
-  left: 10em;
-  top: 0.3em;
+  left: 10.7em;
+  top: 0.9em;
+  input {
+    width: 2.2em;
+    text-align: center;
+  }
 `
 export const css_right = css`
   position: absolute;
@@ -38,7 +45,6 @@ export const css_right = css`
   height: 28em;
   left: 36.7em;
   top: 3.3em;
-  /* background-color: rgba(0, 255, 255, 0.3); */
   /* background-color: rgba(255, 0, 0, 0.3); */
   input {
     margin: 0.6em 0 0.6em 6.5em;

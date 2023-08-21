@@ -1,6 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import Checkbox from '../elements/Checkbox'
 // import CSS from 'csstype'
+// const styles: CSS.Properties = {
+//   backgroundColor: 'rgba(123,112,123,0.4)',
+//   color: 'red',
+//   border: '3px solid green',
+//   position: 'absolute',
+// }
 
 import { ComponentProps } from './components'
 // import './midsection.scss'
@@ -11,14 +15,16 @@ import Textarea from '../elements/Textarea'
 const MidSection = ({ data, setValue }: ComponentProps) => {
   const coins = []
   const right_areas = []
+  const top_inputs = []
 
+  const bonuses = ['str-bonus', 'agi-bonus', 'move']
   const attributes = ['gold', 'silver', 'copper']
   const areas = ['pack', 'memo', 'tiny_stuff']
 
-  // attribute-checks = atc
-  // for (let i = 0; i < 6; i++) {
-  //   attribute_checks.push(<Checkbox key={'atc-' + i} name={'atc-' + i} value={data['atc-' + i]} setValue={setValue} />)
-  // }
+  for (let i = 0; i < 3; i++) {
+    const key = bonuses[i]
+    top_inputs.push(<Input className="" key={key} name={key} value={data[key]} setValue={setValue} />)
+  }
 
   for (let i = 0; i < 3; i++) {
     const key = attributes[i]
@@ -27,8 +33,7 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
 
   for (let i = 0; i < 3; i++) {
     const key = areas[i]
-
-    right_areas.push(<Textarea className={key} key={key} name={key} value={data[key]} setValue={setValue} />)
+    right_areas.push(<Textarea key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
   // // ability-value: abv
@@ -37,15 +42,9 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
   //   attribute_values.push(<Input className="val" key={key} name={key} value={data[key]} setValue={setValue} />)
   // }
 
-  // const styles: CSS.Properties = {
-  //   backgroundColor: 'rgba(123,112,123,0.4)',
-  //   color: 'red',
-  //   border: '3px solid green',
-  //   position: 'absolute',
-  // }
-
   return (
     <>
+      <div css={styles.css_top}>{top_inputs}</div>
       <div css={styles.spells_and_coins}>
         <Textarea name="spells" value={data['spells']} setValue={setValue} />
         <div css={styles.coins}>{coins}</div>
@@ -54,7 +53,6 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
         <Input className="nbr" name={'cpty'} value={data['cpty']} setValue={setValue} />
         {right_areas}
       </div>
-      <div css={styles.css_top}></div>
     </>
   )
 }
