@@ -1,4 +1,6 @@
-.attribute-values {
+import { css } from '@emotion/react'
+
+export const css_values = css`
   margin-top: 2em;
   display: flex;
   justify-content: space-between;
@@ -9,15 +11,13 @@
     font-weight: bold;
     display: inline-block;
   }
-}
-.attribute-checks {
-  // background-color: pink;
+`
+export const css_checks = css`
   display: flex;
   justify-content: space-between;
   margin: 0.6em 0.2em 0 0.4em;
   .checkbox {
-    // background-color: blue;
-    --color: red;
+    --color: rgb(202, 0, 0);
     font-size: 1.4rem;
   }
-}
+`

@@ -1,10 +1,12 @@
-.ability-checks {
+import { css } from '@emotion/react'
+
+export const css_ability_checks = css`
   .checkbox {
     display: block;
     margin-bottom: -0.07em;
   }
-}
-.weapon-checks {
+`
+export const css_weapon_checks = css`
   position: absolute;
   left: 11em;
   top: 1.26em;
@@ -12,8 +14,8 @@
     display: block;
     margin-bottom: -0.069em;
   }
-}
-.secondary-checks {
+`
+export const css_secondary_checks = css`
   position: absolute;
   left: 10.93em;
   top: 16em;
@@ -21,24 +23,24 @@
     display: block;
     margin-bottom: -0.07em;
   }
-}
-.ability-values {
+`
+export const css_ability_values = css`
   position: absolute;
   left: 1.1em;
   top: 0.29em;
-}
-.weapon-values {
+`
+export const css_weapon_values = css`
   position: absolute;
   left: 12.1em;
   top: 1.48em;
-}
-.secondary-values {
+`
+export const css_secondary_values = css`
   position: absolute;
   left: 12.1em;
   top: 16.3em;
-}
-.secondary-names {
+`
+export const css_secondary_names = css`
   position: absolute;
   left: 14.1em;
   top: 16.1em;
-}
+`

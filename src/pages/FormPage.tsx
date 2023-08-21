@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { doc, onSnapshot, setDoc } from 'firebase/firestore'
-import Checkbox from '../elements/Checkbox'
 
-import './form.scss'
 import { useParams } from 'react-router-dom'
 import { db } from '../firebase/firebaseApp'
 import { FormData } from './form'
 import Abilities from '../components/Abilities'
 import Attributes from '../components/Attributes'
+import TopInfo from '../components/TopInfo'
+import MidSection from '../components/MidSection'
+import * as styles from './FormPage.styles'
 
 const FormPage = () => {
   const { id } = useParams()
@@ -23,39 +24,48 @@ const FormPage = () => {
     })
 
     return () => {
-      unsub()
       clearTimeout(timer.current)
+      unsub()
     }
   }, [id])
 
   const save = async () => {
-    await setDoc(doc(db, 'forms', `${id}`), current_data.current)
+    const save_data = {
+      ...current_data.current,
+    }
+    current_data.current = {}
+    await setDoc(doc(db, 'forms', `${id}`), save_data, { merge: true })
   }
 
   const setValue = (name: string, value: string) => {
-    const temp = {
+    clearTimeout(timer.current)
+    setData({
       ...data,
       [name]: value,
+    })
+
+    current_data.current = {
+      ...current_data.current,
+      [name]: value,
     }
-    setData(temp)
-    current_data.current = temp
-    clearTimeout(timer.current)
     timer.current = setTimeout(() => {
       save()
-    }, 500)
+    }, 2000)
   }
 
-  //acl = ability-checks
-
   return (
-    <div className="form-page">
-      {/* <pre className="preview">{JSON.stringify(data, null, 2)}</pre> */}
-
-      <div className="abilities">
+    <div css={styles.css_formpage}>
+      <div css={styles.css_topinfo}>
+        <TopInfo data={data} setValue={setValue} />
+      </div>
+      <div css={styles.css_abilities}>
         <Abilities data={data} setValue={setValue} />
       </div>
-      <div className="attributes">
+      <div css={styles.css_attributes}>
         <Attributes data={data} setValue={setValue} />
+      </div>
+      <div css={styles.css_midsection}>
+        <MidSection data={data} setValue={setValue} />
       </div>
     </div>
   )

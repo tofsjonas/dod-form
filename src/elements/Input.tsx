@@ -1,9 +1,5 @@
 import { ElementProps } from './elements'
-import './input.scss'
-
-// type Props = ElementProps & {
-//   type?: '20' | 'text'
-// }
+import * as styles from './Input.styles'
 
 const Input = ({ name, value = '', className = '', setValue }: ElementProps) => {
   let input_type = 'text'
@@ -22,13 +18,15 @@ const Input = ({ name, value = '', className = '', setValue }: ElementProps) => 
     <input
       value={value}
       type={input_type}
+      title={name}
       max={max}
       min={min}
       maxLength={maxLength}
-      className={'input ' + className}
+      className={'input ' + className + ' ' + name}
       onChange={(e) => {
         setValue(name, e.target.value)
       }}
+      css={styles.css_input}
     />
   )
 }

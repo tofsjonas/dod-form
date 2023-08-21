@@ -1,6 +1,7 @@
 import Checkbox from '../elements/Checkbox'
 import { ComponentProps } from './components'
-import './abilities.scss'
+import * as styles from './Abilities.styles'
+
 import Input from '../elements/Input'
 
 const Abilities = ({ data, setValue }: ComponentProps) => {
@@ -55,13 +56,13 @@ const Abilities = ({ data, setValue }: ComponentProps) => {
 
   return (
     <>
-      <div className="ability-checks">{ability_checks}</div>
-      <div className="weapon-checks">{weapon_checks}</div>
-      <div className="secondary-checks">{secondary_checks}</div>
-      <div className="ability-values">{ability_values}</div>
-      <div className="weapon-values">{weapon_values}</div>
-      <div className="secondary-values">{secondary_values}</div>
-      <div className="secondary-names">{secondary_names}</div>
+      <div css={styles.css_ability_checks}>{ability_checks}</div>
+      <div css={styles.css_weapon_checks}>{weapon_checks}</div>
+      <div css={styles.css_secondary_checks}>{secondary_checks}</div>
+      <div css={styles.css_ability_values}>{ability_values}</div>
+      <div css={styles.css_weapon_values}>{weapon_values}</div>
+      <div css={styles.css_secondary_values}>{secondary_values}</div>
+      <div css={styles.css_secondary_names}>{secondary_names}</div>
     </>
   )
 }

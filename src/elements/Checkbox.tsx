@@ -1,9 +1,10 @@
 import { ElementProps } from './elements'
-import './checkbox.scss'
+// import './checkbox.scss'
+import * as styles from './Checkbox.styles'
 
 const Checkbox = ({ name, value, className, setValue }: ElementProps) => {
   return (
-    <label title={name} className={'checkbox ' + (value === '1' ? 'checked' : '')}>
+    <label css={styles.checkbox} title={name} className={'checkbox ' + (value === '1' ? 'checked' : '')}>
       <input
         type="checkbox"
         className={className}

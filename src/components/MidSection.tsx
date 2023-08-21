@@ -1,10 +1,13 @@
+/** @jsxImportSource @emotion/react */
 import Checkbox from '../elements/Checkbox'
-import { ComponentProps } from './components'
-// import './attributes.scss'
-import Input from '../elements/Input'
-import * as styles from './Attributes.styles'
+// import CSS from 'csstype'
 
-const Attributes = ({ data, setValue }: ComponentProps) => {
+import { ComponentProps } from './components'
+// import './midsection.scss'
+import Input from '../elements/Input'
+import * as styles from './MidSection.styles'
+
+const MidSection = ({ data, setValue }: ComponentProps) => {
   const attribute_values = []
   const attribute_checks = []
   const attributes = ['sty', 'fys', 'smi', 'int', 'psy', 'kar']
@@ -20,11 +23,19 @@ const Attributes = ({ data, setValue }: ComponentProps) => {
     attribute_values.push(<Input className="val" key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
+  // const styles: CSS.Properties = {
+  //   backgroundColor: 'rgba(123,112,123,0.4)',
+  //   color: 'red',
+  //   border: '3px solid green',
+  //   position: 'absolute',
+  // }
+
   return (
     <>
-      <div css={styles.css_values}>{attribute_values}</div>
-      <div css={styles.css_checks}>{attribute_checks}</div>
+      <div css={styles.css_left}></div>
+      <div css={styles.css_right}></div>
+      <div css={styles.css_top}></div>
     </>
   )
 }
-export default Attributes
+export default MidSection
