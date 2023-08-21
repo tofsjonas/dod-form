@@ -38,10 +38,10 @@ export const name = css`
 export const right = css`
   position: absolute;
   left: 32.6em;
-  top: 0em;
+  top: -0.15em;
   width: 15em;
-  .textarea {
-    height: 9.3em;
-    width: 19.5em;
+  textarea {
+    height: 7.9em;
+    width: 16.2em;
   }
 `

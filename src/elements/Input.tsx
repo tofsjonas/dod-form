@@ -13,6 +13,9 @@ const Input = ({ name, value = '', className = '', setValue }: ElementProps) => 
     min = 1
     maxLength = 2
   }
+  if (className === 'nbr') {
+    input_type = 'number'
+  }
 
   return (
     <input

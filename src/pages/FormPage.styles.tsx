@@ -31,6 +31,9 @@ export const css_abilities = css`
   position: absolute;
   top: 24.43em;
   left: 16.1em;
+  input {
+    font-size: 0.8em;
+  }
 `
 export const css_midsection = css`
   position: absolute;

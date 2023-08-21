@@ -37,10 +37,10 @@ export const css_weapon_values = css`
 export const css_secondary_values = css`
   position: absolute;
   left: 12.1em;
-  top: 16.3em;
+  top: 16.2em;
 `
 export const css_secondary_names = css`
   position: absolute;
   left: 14.1em;
-  top: 16.1em;
+  top: 16.2em;
 `

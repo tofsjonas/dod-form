@@ -10,7 +10,7 @@ const Textarea = ({ name, value = '', className = '', setValue }: ElementProps) 
       value={value}
       title={name}
       maxLength={maxLength}
-      className={'textarea ' + className + ' ' + name}
+      className={className + ' ' + name}
       onChange={(e) => {
         setValue(name, e.target.value)
       }}

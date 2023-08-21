@@ -26,7 +26,8 @@ export const checkbox = css`
   &:hover {
     // background-color: orange;
     .checkmark {
-      border-color: var(--hover);
+      transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
+      /* border-color: var(--hover); */
     }
   }
 
