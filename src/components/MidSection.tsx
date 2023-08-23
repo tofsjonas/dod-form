@@ -17,9 +17,9 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
   const right_areas = []
   const top_inputs = []
 
-  const bonuses = ['str-bonus', 'agi-bonus', 'move']
-  const attributes = ['gold', 'silver', 'copper']
-  const areas = ['pack', 'memo', 'tiny_stuff']
+  const bonuses = ['dmg-bonus-str', 'dmg-bonus-agl', 'movement']
+  const money = ['gold', 'silver', 'copper']
+  const areas = ['inventory', 'memento', 'tiny-items']
 
   for (let i = 0; i < 3; i++) {
     const key = bonuses[i]
@@ -27,7 +27,7 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
   }
 
   for (let i = 0; i < 3; i++) {
-    const key = attributes[i]
+    const key = 'coins-' + money[i]
     coins.push(<Input key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
@@ -36,21 +36,15 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
     right_areas.push(<Textarea key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
-  // // ability-value: abv
-  // for (let i = 0; i < 6; i++) {
-  //   const key = attributes[i]
-  //   attribute_values.push(<Input className="val" key={key} name={key} value={data[key]} setValue={setValue} />)
-  // }
-
   return (
     <>
       <div css={styles.css_top}>{top_inputs}</div>
-      <div css={styles.spells_and_coins}>
-        <Textarea name="spells" value={data['spells']} setValue={setValue} />
+      <div css={styles.left}>
+        <Textarea name="abilities-and-spells" value={data['abilities-and-spells']} setValue={setValue} />
         <div css={styles.coins}>{coins}</div>
       </div>
       <div css={styles.css_right}>
-        <Input className="nbr" name={'cpty'} value={data['cpty']} setValue={setValue} />
+        <Input className="nbr" name={'encumberance-limit'} value={data['encumberance-limit']} setValue={setValue} />
         {right_areas}
       </div>
     </>

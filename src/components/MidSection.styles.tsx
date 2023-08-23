@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 
-export const spells_and_coins = css`
+export const left = css`
   position: absolute;
   width: 10.8em;
   height: 26em;
@@ -50,19 +50,19 @@ export const css_right = css`
     margin: 0.6em 0 0.6em 6.5em;
   }
 
-  .pack {
+  .inventory {
     height: 13.8em;
     margin-left: 0.7em;
     line-height: 1.38em;
     width: 11.3em;
   }
-  .memo {
+  .memento {
     height: 3.8em;
     margin: 1.38em 0 2.4em 0;
     line-height: 1.38em;
     /* width: 11.3em; */
   }
-  .tiny_stuff {
+  .tiny-items {
     height: 7em;
     margin-left: 0.7em;
     line-height: 1.38em;

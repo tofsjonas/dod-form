@@ -1,26 +1,29 @@
 import { css } from '@emotion/react'
 
-export const left = css`
+export const info = css`
   input {
-    font-size: 0.8em;
-    width: 18.5em !important;
-    margin-bottom: 0.7em;
-    padding-left: 4em;
+    /* background-color: rgba(0, 255, 255, 0.3); */
+    font-size: 0.9em;
+    width: 16.5em !important;
+    height: 1.3em;
 
-    &.til-1 {
+    &.kin {
       display: inline-block;
-      width: 11em !important;
-      margin-right: 0.4em;
+      width: 9.8em !important;
+      margin-right: 0.3em;
     }
-    &.til-2 {
+    &.age {
       display: inline-block;
-      width: 7.1em !important;
-      // padding-left: initial;
-      // text-align: right;
+      width: 6.4em !important;
     }
-    &.til-5 {
-      padding-left: initial;
+    &.profession {
+      margin-bottom: 0em;
     }
+  }
+  .weakness {
+    margin-top: 0;
+    height: 3.3em;
+    width: 16.2em;
   }
 `
 export const name = css`
@@ -35,7 +38,7 @@ export const name = css`
     // color: blue;
   }
 `
-export const right = css`
+export const appearance = css`
   position: absolute;
   left: 32.6em;
   top: -0.15em;
