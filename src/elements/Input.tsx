@@ -7,13 +7,13 @@ const Input = ({ name, value = '', className = '', setValue }: ElementProps) => 
   let min = -10000
   let maxLength = 10000
 
-  if (className === 'val') {
+  if (/\bval\b/.test(className)) {
     input_type = 'number'
     max = 20
     min = 1
     maxLength = 2
   }
-  if (className === 'nbr') {
+  if (/\bnbr\b/.test(className)) {
     input_type = 'number'
   }
 

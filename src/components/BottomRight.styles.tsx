@@ -5,8 +5,18 @@ export const rest = css`
   margin-top: 0.5em;
 `
 
+export const willpower_points = css`
+  position: absolute;
+  left: 1.8em;
+  top: 4.7em;
+  text-align: center !important;
+`
+export const hit_points = css`
+  ${willpower_points}
+  top: 10.5em;
+`
+
 export const willpower_point_checks = css`
-  /* background-color: rgba(0, 255, 255, 0.3); */
   position: absolute;
   width: 10.3em;
   left: 4.8em;
@@ -20,7 +30,6 @@ export const willpower_point_checks = css`
   }
 `
 export const hit_point_checks = css`
-  /* background-color: rgba(0, 255, 255, 0.3); */
   ${willpower_point_checks}
   top: 9.6em;
   .checkbox {
@@ -29,7 +38,6 @@ export const hit_point_checks = css`
 `
 
 export const death_rolls = css`
-  /* background-color: rgba(0, 255, 255, 0.3); */
   ${willpower_point_checks}
   top: 13.4em;
   left: 6.5em;
@@ -40,4 +48,3 @@ export const death_rolls = css`
     }
   }
 `
-export const attribute_checks = css``

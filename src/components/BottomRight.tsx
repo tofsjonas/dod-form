@@ -47,6 +47,20 @@ const BottomRight = ({ data, setValue, lang }: Props) => {
         {death_roll_successes}
         {death_roll_failures}
       </div>
+      <Input
+        css={styles.willpower_points}
+        className="val"
+        name={'willpower-points'}
+        value={data['willpower-points']}
+        setValue={setValue}
+      />
+      <Input
+        css={styles.hit_points}
+        className="val"
+        name={'hit-points'}
+        value={data['hit-points']}
+        setValue={setValue}
+      />
     </>
   )
 }
