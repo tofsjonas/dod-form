@@ -76,7 +76,7 @@ const FormPage = () => {
         <MidSection data={data} setValue={setValue} />
       </div>
       <div css={styles.bottom_right}>
-        <BottomRight data={data} setValue={setValue} />
+        <BottomRight lang={lang === 'sv' ? 'sv' : 'en'} data={data} setValue={setValue} />
       </div>
     </div>
   )

@@ -3,27 +3,49 @@ import { ComponentProps } from './components'
 import Input from '../elements/Input'
 import * as styles from './BottomRight.styles'
 
-const BottomRight = ({ data, setValue }: ComponentProps) => {
-  const attribute_values = []
-  const attribute_checks = []
-  const attributes = ['sty', 'fys', 'smi', 'int', 'psy', 'kar']
+type Props = ComponentProps & {
+  lang: 'en' | 'sv'
+}
 
-  // attribute-checks = atc
-  for (let i = 0; i < 6; i++) {
-    attribute_checks.push(<Checkbox key={'atc-' + i} name={'atc-' + i} value={data['atc-' + i]} setValue={setValue} />)
+const BottomRight = ({ data, setValue, lang }: Props) => {
+  const willpower_point_checks = []
+  const hit_point_checks = []
+  const death_roll_successes = []
+  const death_roll_failures = []
+
+  for (let i = 1; i < 21; i++) {
+    let key = 'willpower-check-' + i
+    willpower_point_checks.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
+    key = 'hit-point-check-' + i
+    hit_point_checks.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
-  // ability-value: abv
-  for (let i = 0; i < 6; i++) {
-    const key = attributes[i]
-    attribute_values.push(<Input className="nbr" key={key} name={key} value={data[key]} setValue={setValue} />)
+  for (let i = 1; i < 4; i++) {
+    let key = 'death-roll-success-' + i
+    death_roll_successes.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
+    key = 'death-roll-failure-' + i
+    death_roll_failures.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
   return (
     <>
       <div css={styles.rest}>
-        <Checkbox name={'quick-rest'} value={data['quick-rest']} setValue={setValue} />
-        <Checkbox name={'short-rest'} value={data['short-rest']} setValue={setValue} />
+        <Checkbox
+          style={{
+            margin: `${lang === 'sv' ? '0 4em 0 2.75em' : '0 4.2em 0 2em'}`,
+          }}
+          name={'round-rest'}
+          value={data['round-rest']}
+          setValue={setValue}
+        />
+        <Checkbox name={'stretch-rest'} value={data['stretch-rest']} setValue={setValue} />
+      </div>
+
+      <div css={styles.willpower_point_checks}>{willpower_point_checks}</div>
+      <div css={styles.hit_point_checks}>{hit_point_checks}</div>
+      <div css={styles.death_rolls}>
+        {death_roll_successes}
+        {death_roll_failures}
       </div>
     </>
   )

@@ -8,7 +8,7 @@ type Props = ComponentProps & {
   lang: 'en' | 'sv'
 }
 
-const Skills = ({ data, setValue, lang = 'sv' }: Props) => {
+const Skills = ({ data, setValue, lang }: Props) => {
   const skills = {
     en: [
       'acrobatics', // Hoppa och klättra

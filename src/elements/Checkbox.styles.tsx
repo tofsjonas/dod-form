@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 export const checkbox = css`
   --color: black;
   --hover: gray;
-  // background-color: pink;
+  /* background-color: rgba(255, 192, 203, 0.7); */
   position: relative;
   height: 1.3em;
   width: 1.3em;
@@ -20,14 +20,10 @@ export const checkbox = css`
     width: 0.4em;
     border-bottom: 0.2em solid transparent;
     border-right: 0.2em solid transparent;
-    // border-bottom: 0.2em solid green;
-    // border-right: 0.2em solid green;
   }
   &:hover {
-    // background-color: orange;
     .checkmark {
       transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
-      /* border-color: var(--hover); */
     }
   }
 
