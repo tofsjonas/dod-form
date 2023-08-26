@@ -2289,10 +2289,11 @@ This typically indicates that your device does not have a healthy Internet conne
   }
 `,iw=W`
   font-size: 1.1em;
+  height: 1em;
   position: absolute;
   text-align: center;
   left: 4em;
-  top: 1.4em;
+  top: 1.2em;
   width: 9em;
 `,v4=W`
   ${iw}
@@ -2316,11 +2317,12 @@ This typically indicates that your device does not have a healthy Internet conne
   top: 8.7em;
   width: 32em;
 `,w4=W`
-  margin-bottom: 0.13em;
+  margin-bottom: 0.1em;
   input {
     font-size: 0.9em;
+    height: 1.2em;
     display: inline-block;
-    margin-right: 0.27em;
+    margin-right: 0.23em;
   }
   .weapon-name {
     width: 9.6em;
