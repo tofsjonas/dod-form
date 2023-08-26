@@ -1,10 +1,10 @@
 import { createId } from '@paralleldrive/cuid2'
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const StartPage = () => {
   const navigate = useNavigate()
-  const [lang, setLang] = useState('sv')
+  const [lang, setLang] = useState('en')
 
   return (
     <>
@@ -24,8 +24,6 @@ const StartPage = () => {
         onClick={() => {
           const id = createId()
           navigate(lang + '/' + id)
-
-          console.log('🚀 COMMANDER ~ file: App.tsx ~ line ~ 14 ~ ', 'aaaaaaaaaaa', createId())
         }}
       >
         create new form

@@ -38,10 +38,11 @@ export const armor_and_stuff = css`
 
 export const armor = css`
   font-size: 1.1em;
+  height: 1em;
   position: absolute;
   text-align: center;
   left: 4em;
-  top: 1.4em;
+  top: 1.2em;
   width: 9em;
 `
 export const helmet = css`
@@ -73,11 +74,12 @@ export const weapons = css`
   width: 32em;
 `
 export const weapon_row = css`
-  margin-bottom: 0.13em;
+  margin-bottom: 0.1em;
   input {
     font-size: 0.9em;
+    height: 1.2em;
     display: inline-block;
-    margin-right: 0.27em;
+    margin-right: 0.23em;
   }
   .weapon-name {
     width: 9.6em;

@@ -13,7 +13,7 @@ import Skills from '../components/Skills'
 import bg_en from '../assets/form-en.jpg'
 import bg_sv from '../assets/form-sv.jpg'
 import BottomLeft from '../components/BottomLeft'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 const FormPage = () => {
   const { lang, id } = useParams()
