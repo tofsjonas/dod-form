@@ -7,16 +7,14 @@ import * as styles from './Attributes.styles'
 const Attributes = ({ data, setValue }: ComponentProps) => {
   const attribute_values = []
   const attribute_checks = []
-  const attributes = ['STR', 'CON', 'AGL', 'INT', 'WIL', 'CHA']
+  const attributes = ['str', 'con', 'agl', 'int', 'wil', 'cha']
   const conditions = ['exhausted', 'sickly', 'dazed', 'angry', 'scared', 'disheartened']
 
-  // attribute-checks = atc
   for (let i = 0; i < 6; i++) {
     const key = 'condition-' + conditions[i]
     attribute_checks.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
-  // ability-value: abv
   for (let i = 0; i < 6; i++) {
     const key = 'attribute-' + attributes[i]
     attribute_values.push(<Input className="val" key={key} name={key} value={data[key]} setValue={setValue} />)

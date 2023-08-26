@@ -42,11 +42,16 @@ export const midsection = css`
   top: 19em;
 `
 
-export const bottom_right = css`
+export const bottom_left = css`
   /* background-color: rgba(0, 255, 255, 0.3);
   height: 20em;
-  width: 18em; */
+  width: 34em; */
 
+  position: absolute;
+  left: 3em;
+  top: 53em;
+`
+export const bottom_right = css`
   position: absolute;
   left: 35em;
   top: 51em;

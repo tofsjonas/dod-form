@@ -7,20 +7,20 @@ export const info = css`
     width: 16.5em !important;
     height: 1.3em;
 
-    &.kin {
+    &.info-kin {
       display: inline-block;
       width: 9.8em !important;
       margin-right: 0.3em;
     }
-    &.age {
+    &.info-age {
       display: inline-block;
       width: 6.4em !important;
     }
-    &.profession {
+    &.info-profession {
       margin-bottom: 0em;
     }
   }
-  .weakness {
+  .info-weakness {
     margin-top: 0;
     height: 3.3em;
     width: 16.2em;

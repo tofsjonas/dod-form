@@ -7,9 +7,8 @@ const TopInfo = ({ data, setValue }: ComponentProps) => {
   const info = []
   const names = ['player', 'kin', 'age', 'profession']
 
-  // topinfo-info = til
   for (let i = 0; i < 4; i++) {
-    const key = names[i]
+    const key = 'info-' + names[i]
     info.push(<Input className="name" key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
@@ -17,13 +16,13 @@ const TopInfo = ({ data, setValue }: ComponentProps) => {
     <>
       <div css={styles.info}>
         {info}
-        <Textarea name="weakness" value={data['weakness']} setValue={setValue} />
+        <Textarea name="info-weakness" value={data['info-weakness']} setValue={setValue} />
       </div>
       <div css={styles.name}>
-        <Input className="name" name="name" value={data['name']} setValue={setValue} />
+        <Input className="name" name="info-name" value={data['info-name']} setValue={setValue} />
       </div>
       <div css={styles.appearance}>
-        <Textarea name="appearance" value={data['appearance']} setValue={setValue} />
+        <Textarea name="info-appearance" value={data['info-appearance']} setValue={setValue} />
       </div>
     </>
   )

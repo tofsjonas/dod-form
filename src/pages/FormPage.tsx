@@ -12,6 +12,8 @@ import BottomRight from '../components/BottomRight'
 import Skills from '../components/Skills'
 import bg_en from '../assets/form-en.jpg'
 import bg_sv from '../assets/form-sv.jpg'
+import BottomLeft from '../components/BottomLeft'
+import { Helmet } from 'react-helmet'
 
 const FormPage = () => {
   const { lang, id } = useParams()
@@ -57,28 +59,36 @@ const FormPage = () => {
   }
 
   return (
-    <div
-      css={styles.formpage}
-      style={{
-        background: `url(${lang === 'sv' ? bg_sv : bg_en}) no-repeat`,
-      }}
-    >
-      <div css={styles.topinfo}>
-        <TopInfo data={data} setValue={setValue} />
+    <>
+      <div
+        css={styles.formpage}
+        style={{
+          background: `url(${lang === 'sv' ? bg_sv : bg_en}) no-repeat`,
+        }}
+      >
+        <Helmet>
+          <html lang={lang === 'sv' ? 'sv' : 'en'} />
+        </Helmet>
+        <div css={styles.topinfo}>
+          <TopInfo data={data} setValue={setValue} />
+        </div>
+        <div css={styles.abilities}>
+          <Skills lang={lang === 'sv' ? 'sv' : 'en'} data={data} setValue={setValue} />
+        </div>
+        <div css={styles.attributes}>
+          <Attributes data={data} setValue={setValue} />
+        </div>
+        <div css={styles.midsection}>
+          <MidSection data={data} setValue={setValue} />
+        </div>
+        <div css={styles.bottom_left}>
+          <BottomLeft lang={lang === 'sv' ? 'sv' : 'en'} data={data} setValue={setValue} />
+        </div>
+        <div css={styles.bottom_right}>
+          <BottomRight lang={lang === 'sv' ? 'sv' : 'en'} data={data} setValue={setValue} />
+        </div>
       </div>
-      <div css={styles.abilities}>
-        <Skills lang={lang === 'sv' ? 'sv' : 'en'} data={data} setValue={setValue} />
-      </div>
-      <div css={styles.attributes}>
-        <Attributes data={data} setValue={setValue} />
-      </div>
-      <div css={styles.midsection}>
-        <MidSection data={data} setValue={setValue} />
-      </div>
-      <div css={styles.bottom_right}>
-        <BottomRight lang={lang === 'sv' ? 'sv' : 'en'} data={data} setValue={setValue} />
-      </div>
-    </div>
+    </>
   )
 }
 export default FormPage

@@ -14,9 +14,9 @@ const BottomRight = ({ data, setValue, lang }: Props) => {
   const death_roll_failures = []
 
   for (let i = 1; i < 21; i++) {
-    let key = 'willpower-check-' + i
+    let key = 'wp-check-' + i
     willpower_point_checks.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
-    key = 'hit-point-check-' + i
+    key = 'hp-check-' + i
     hit_point_checks.push(<Checkbox key={key} name={key} value={data[key]} setValue={setValue} />)
   }
 
@@ -50,8 +50,8 @@ const BottomRight = ({ data, setValue, lang }: Props) => {
       <Input
         css={styles.willpower_points}
         className="val"
-        name={'willpower-points'}
-        value={data['willpower-points']}
+        name={'wp-points'}
+        value={data['wp-points']}
         setValue={setValue}
       />
       <Input

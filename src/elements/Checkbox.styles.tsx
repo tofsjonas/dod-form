@@ -4,6 +4,11 @@ export const checkbox = css`
   --color: black;
   --hover: gray;
   /* background-color: rgba(255, 192, 203, 0.7); */
+
+  &.pink {
+    background-color: rgba(255, 192, 203, 0.7);
+  }
+
   position: relative;
   height: 1.3em;
   width: 1.3em;
