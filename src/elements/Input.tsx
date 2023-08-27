@@ -21,7 +21,8 @@ const Input = ({ name, value = '', className = '', setValue }: ElementProps) => 
     <input
       value={value}
       type={input_type}
-      title={name}
+      // title={name}
+      name={name}
       max={max}
       min={min}
       maxLength={maxLength}

@@ -7,8 +7,9 @@ const Textarea = ({ name, value = '', className = '', setValue }: ElementProps) 
   return (
     <textarea
       css={styles.textarea}
+      name={name}
       value={value}
-      title={name}
+      // title={name}
       maxLength={maxLength}
       className={className + ' ' + name}
       onChange={(e) => {

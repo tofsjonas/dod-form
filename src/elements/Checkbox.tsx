@@ -6,10 +6,11 @@ const Checkbox = ({ name, value, className, setValue, style }: ElementProps) => 
     <label
       style={style}
       css={styles.checkbox}
-      title={name}
+      // title={name}
       className={className + ' checkbox ' + name + ' checkbox ' + (value === '1' ? 'checked' : '')}
     >
       <input
+        name={name}
         type="checkbox"
         className={className}
         checked={value === '1'}

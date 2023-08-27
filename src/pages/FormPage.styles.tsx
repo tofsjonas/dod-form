@@ -1,5 +1,4 @@
 import { css } from '@emotion/react'
-import bg from '../assets/form-en.jpg'
 
 const width = 53.1
 const height = width * 1.291764706
@@ -7,7 +6,6 @@ export const formpage = css`
   margin: 0 auto;
   width: ${width}rem;
   height: ${height}rem;
-  /* background: url(${bg}) no-repeat; */
   position: relative;
 `
 
