@@ -40,11 +40,22 @@ export const hit_point_checks = css`
 export const death_rolls = css`
   ${willpower_point_checks}
   top: 13.4em;
-  left: 6.5em;
+  left: 5.5em;
   .checkbox {
     width: 1.25em;
+    &.death-roll-success-1 {
+      margin-left: 1em;
+    }
     &.death-roll-failure-1 {
       margin-left: 0.6em;
+    }
+    &.lang-sv {
+      &.death-roll-success-1 {
+        margin-left: 0em;
+      }
+      &.death-roll-failure-1 {
+        margin-left: 1.3em;
+      }
     }
   }
 `

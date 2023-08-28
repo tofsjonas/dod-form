@@ -21,7 +21,8 @@ export const info = css`
     }
   }
   .info-weakness {
-    margin-top: 0;
+    margin-top: 0.16em;
+    line-height: 1.6em;
     height: 3.3em;
     width: 16.2em;
   }
@@ -44,6 +45,7 @@ export const appearance = css`
   top: -0.15em;
   width: 15em;
   textarea {
+    line-height: 1.65em;
     height: 7.9em;
     width: 16.2em;
   }
