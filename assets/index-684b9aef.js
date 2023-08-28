@@ -2113,7 +2113,8 @@ This typically indicates that your device does not have a healthy Internet conne
     }
   }
   .info-weakness {
-    margin-top: 0;
+    margin-top: 0.16em;
+    line-height: 1.6em;
     height: 3.3em;
     width: 16.2em;
   }
@@ -2134,6 +2135,7 @@ This typically indicates that your device does not have a healthy Internet conne
   top: -0.15em;
   width: 15em;
   textarea {
+    line-height: 1.65em;
     height: 7.9em;
     width: 16.2em;
   }
@@ -2275,14 +2277,25 @@ This typically indicates that your device does not have a healthy Internet conne
 `,XD=K`
   ${Tm}
   top: 13.4em;
-  left: 6.5em;
+  left: 5.5em;
   .checkbox {
     width: 1.25em;
+    &.death-roll-success-1 {
+      margin-left: 1em;
+    }
     &.death-roll-failure-1 {
       margin-left: 0.6em;
     }
+    &.lang-sv {
+      &.death-roll-success-1 {
+        margin-left: 0em;
+      }
+      &.death-roll-failure-1 {
+        margin-left: 1.3em;
+      }
+    }
   }
-`,YD=({data:t,setValue:e,lang:n})=>{const r=[],i=[],s=[],o=[];for(let a=1;a<21;a++){let l="wp-check-"+a;r.push(C(Wt,{name:l,value:t[l],setValue:e},l)),l="hp-check-"+a,i.push(C(Wt,{name:l,value:t[l],setValue:e},l))}for(let a=1;a<4;a++){let l="death-roll-success-"+a;s.push(C(Wt,{name:l,value:t[l],setValue:e},l)),l="death-roll-failure-"+a,o.push(C(Wt,{name:l,value:t[l],setValue:e},l))}return Ce(Xr,{children:[Ce("div",{css:qD,children:[C(Wt,{style:{margin:`${n==="sv"?"0 4em 0 2.75em":"0 4.2em 0 2em"}`},name:"round-rest",value:t["round-rest"],setValue:e}),C(Wt,{name:"stretch-rest",value:t["stretch-rest"],setValue:e})]}),C("div",{css:Tm,children:r}),C("div",{css:QD,children:i}),Ce("div",{css:XD,children:[s,o]}),C(We,{css:MT,className:"val",name:"wp-points",value:t["wp-points"],setValue:e}),C(We,{css:GD,className:"val",name:"hit-points",value:t["hit-points"],setValue:e})]})},JD=K`
+`,YD=({data:t,setValue:e,lang:n})=>{const r=[],i=[],s=[],o=[];for(let a=1;a<21;a++){let l="wp-check-"+a;r.push(C(Wt,{name:l,value:t[l],setValue:e},l)),l="hp-check-"+a,i.push(C(Wt,{name:l,value:t[l],setValue:e},l))}for(let a=1;a<4;a++){let l="death-roll-success-"+a;s.push(C(Wt,{className:"lang-"+n,name:l,value:t[l],setValue:e},l)),l="death-roll-failure-"+a,o.push(C(Wt,{className:"lang-"+n,name:l,value:t[l],setValue:e},l))}return Ce(Xr,{children:[Ce("div",{css:qD,children:[C(Wt,{style:{margin:`${n==="sv"?"0 4em 0 2.75em":"0 4.2em 0 2em"}`},name:"round-rest",value:t["round-rest"],setValue:e}),C(Wt,{name:"stretch-rest",value:t["stretch-rest"],setValue:e})]}),C("div",{css:Tm,children:r}),C("div",{css:QD,children:i}),Ce("div",{css:XD,children:[s,o]}),C(We,{css:MT,className:"val",name:"wp-points",value:t["wp-points"],setValue:e}),C(We,{css:GD,className:"val",name:"hit-points",value:t["hit-points"],setValue:e})]})},JD=K`
   .checkbox {
     display: block;
     margin-bottom: -0.07em;
