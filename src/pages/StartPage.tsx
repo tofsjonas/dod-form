@@ -4,38 +4,31 @@ import { useState } from 'react'
 import * as styles from './StartPage.styles'
 
 const StartPage = () => {
-  const [lang, setLang] = useState('')
   const [url, setUrl] = useState('')
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault()
-        const id = createId()
-        setUrl(lang + '/' + id)
-        // navigate(lang + '/' + id)
-      }}
-      css={styles.startpage}
-    >
-      <h1>New Dragonbane/Drakar & Demoner character sheet</h1>
+    <div css={styles.startpage}>
+      <h1>New character sheet</h1>
       <br />
       <br />
-      <select
-        required
-        value={lang}
-        onChange={(e) => {
-          setLang(e.target.value)
+      <br />
+      <button
+        onClick={() => {
+          const id = createId()
+          setUrl('en/' + id)
         }}
       >
-        <option value="">Select language</option>
-        <option value="en">English</option>
-        <option value="sv">Swedish</option>
-      </select>
-      <br />
-      <br />
-      <br />
-      <br />
-      <button type="submit">create character sheet!</button>
+        Dragonbane
+      </button>
+      &nbsp; &nbsp; &nbsp;
+      <button
+        onClick={() => {
+          const id = createId()
+          setUrl('sv/' + id)
+        }}
+      >
+        Drakar och Demoner
+      </button>
       {url && (
         <div>
           <p>Here is the link to your character sheet.</p>
@@ -45,13 +38,12 @@ const StartPage = () => {
           <p>Keep it secret. Keep it safe. 🧙‍♂️️</p>
           <p>
             <Link target="_blank" to={url}>
-              {window.location.href}
-              {url}
+              {window.location.href}#{url}
             </Link>
           </p>
         </div>
       )}
-    </form>
+    </div>
   )
 }
 export default StartPage
