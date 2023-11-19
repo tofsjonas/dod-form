@@ -27,20 +27,24 @@ export const css_secondary_checks = css`
 export const css_ability_values = css`
   position: absolute;
   left: 1.1em;
-  top: 0.29em;
+  top: 0.1em;
+  input {
+    font-size: 0.82em;
+    margin-bottom: 0.2em;
+  }
 `
 export const css_weapon_values = css`
-  position: absolute;
+  ${css_ability_values}
   left: 12.1em;
-  top: 1.48em;
+  top: 1.28em;
 `
 export const css_secondary_values = css`
-  position: absolute;
+  ${css_ability_values}
   left: 12.1em;
   top: 16.2em;
 `
 export const css_secondary_names = css`
-  position: absolute;
+  ${css_ability_values}
   left: 14.1em;
   top: 16.2em;
 `

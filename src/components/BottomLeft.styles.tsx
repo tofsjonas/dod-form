@@ -80,20 +80,25 @@ export const weapon_row = css`
     height: 1.2em;
     display: inline-block;
     margin-right: 0.23em;
+    margin-bottom: 0.2em;
   }
   .weapon-name {
     width: 9.6em;
   }
   .weapon-grip {
+    text-align: center;
     width: 2.7em;
   }
   .weapon-range {
+    text-align: center;
     width: 4.1em;
   }
   .weapon-damage {
+    text-align: center;
     width: 4.1em;
   }
   .weapon-durability {
+    text-align: center;
     width: 2.7em;
   }
   .weapon-features {

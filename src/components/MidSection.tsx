@@ -44,7 +44,7 @@ const MidSection = ({ data, setValue }: ComponentProps) => {
         <div css={styles.coins}>{coins}</div>
       </div>
       <div css={styles.css_right}>
-        <Input className="nbr" name={'encumberance-limit'} value={data['encumberance-limit']} setValue={setValue} />
+        <Input className="val" name="encumberance-limit" value={data['encumberance-limit']} setValue={setValue} />
         {right_areas}
       </div>
     </>

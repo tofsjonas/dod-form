@@ -5,7 +5,8 @@ export const info = css`
     /* background-color: rgba(0, 255, 255, 0.3); */
     font-size: 0.9em;
     width: 16.5em !important;
-    height: 1.3em;
+    margin-bottom: 0.2em;
+    /* height: 1.3em; */
 
     &.info-kin {
       display: inline-block;
@@ -17,7 +18,7 @@ export const info = css`
       width: 6.4em !important;
     }
     &.info-profession {
-      margin-bottom: 0em;
+      /* margin-bottom: 0em; */
     }
   }
   .info-weakness {

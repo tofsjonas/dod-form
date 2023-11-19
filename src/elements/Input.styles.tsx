@@ -4,11 +4,14 @@ export const css_input = css`
   display: block;
   background-color: transparent;
   background-color: rgba(255, 165, 0, 0.1);
+  /* background-color: rgba(255, 165, 0, 0.3); */
+  /* background-color: orange; */
   /* background-color: rgba(0, 68, 255, 0.3); */
   font-size: 1em;
+  line-height: 0.7em !important;
+  height: 1.3em;
   border: 0;
-  height: 0.91rem;
-  margin-bottom: 0.31rem;
+  padding: 0;
 
   &:active,
   &:focus {

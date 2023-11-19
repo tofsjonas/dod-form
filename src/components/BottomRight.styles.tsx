@@ -8,12 +8,12 @@ export const rest = css`
 export const willpower_points = css`
   position: absolute;
   left: 1.8em;
-  top: 4.7em;
+  top: 4.5em;
   text-align: center !important;
 `
 export const hit_points = css`
   ${willpower_points}
-  top: 10.5em;
+  top: 10.2em;
 `
 
 export const willpower_point_checks = css`
