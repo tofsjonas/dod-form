@@ -2113,14 +2113,17 @@ This typically indicates that your device does not have a healthy Internet conne
   }
 `,CD=q`
   position: absolute;
-  left: 17em;
-  top: 7em;
+
+  left: 15em;
+  top: 6.5em;
   input {
-    font-size: 1rem;
+    background-color: transparent;
+
+    font-size: 1.2em;
+    height: 1.5em;
     font-weight: bold;
     text-align: center;
     width: 14em !important;
-    // color: blue;
   }
 `,RD=q`
   position: absolute;
