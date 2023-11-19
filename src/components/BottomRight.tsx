@@ -23,11 +23,11 @@ const BottomRight = ({ data, setValue, lang }: Props) => {
   for (let i = 1; i < 4; i++) {
     let key = 'death-roll-success-' + i
     death_roll_successes.push(
-      <Checkbox className={'lang-' + lang} key={key} name={key} value={data[key]} setValue={setValue} />,
+      <Checkbox className={`lang-${lang}`} key={key} name={key} value={data[key]} setValue={setValue} />,
     )
     key = 'death-roll-failure-' + i
     death_roll_failures.push(
-      <Checkbox className={'lang-' + lang} key={key} name={key} value={data[key]} setValue={setValue} />,
+      <Checkbox className={`lang-${lang}`} key={key} name={key} value={data[key]} setValue={setValue} />,
     )
   }
 

@@ -25,8 +25,9 @@ const Input = ({ name, value = '', className = '', setValue }: ElementProps) => 
       name={name}
       max={max}
       min={min}
+      onFocus={(e) => e.target.select()}
       maxLength={maxLength}
-      className={`${className + ' ' + name}`.trim()}
+      className={`${className} ${name}`.trim()}
       onChange={(e) => {
         setValue(name, e.target.value)
       }}

@@ -20,19 +20,20 @@ export const willpower_point_checks = css`
   position: absolute;
   width: 10.3em;
   left: 4.8em;
-  top: 3.75em;
+  top: 3.85em;
   .checkbox {
     --color: darkred;
     width: 0.96em;
-    height: 1.1em;
+    height: 1em;
     margin: 0;
     padding: 0;
   }
 `
 export const hit_point_checks = css`
   ${willpower_point_checks}
-  top: 9.6em;
+  top: 9.7em;
   .checkbox {
+    height: 0.95em;
     --color: darkgreen;
   }
 `
