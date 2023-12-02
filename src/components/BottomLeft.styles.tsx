@@ -37,17 +37,15 @@ export const armor_and_stuff = css`
 `
 
 export const armor = css`
-  font-size: 1.1em;
-  height: 1em;
   position: absolute;
   text-align: center;
-  left: 4em;
+  left: 4.8em;
   top: 1.2em;
   width: 9em;
 `
 export const helmet = css`
   ${armor}
-  left: 18em;
+  left: 20.5em;
   width: 9.5em;
 `
 
