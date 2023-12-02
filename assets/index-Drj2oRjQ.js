@@ -2376,16 +2376,14 @@ This typically indicates that your device does not have a healthy Internet conne
     top: 4.2em;
   }
 `,LT=W`
-  /* font-size: 1.1em;
-  height: 1em; */
   position: absolute;
   text-align: center;
-  left: 4em;
+  left: 4.8em;
   top: 1.2em;
   width: 9em;
 `,iL=W`
   ${LT}
-  left: 18em;
+  left: 20.5em;
   width: 9.5em;
 `,VT=W`
   font-size: 1.5em;
