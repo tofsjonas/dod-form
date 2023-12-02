@@ -51,18 +51,19 @@ export const helmet = css`
 
 export const armor_rating = css`
   font-size: 1.5em;
-  height: 1em;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* height: 1em; */
   position: absolute;
   text-align: center;
   left: 1em;
-  top: 1em;
+  top: 0.8em;
   width: 1em;
 `
 
 export const helmet_rating = css`
   ${armor_rating}
   left: 11.3em;
-  top: 0.4em;
+  top: 0.2em;
 `
 
 export const weapons = css`
